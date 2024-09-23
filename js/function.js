@@ -27,8 +27,10 @@ function totalAmount(id) {
 function historyUpdate(id, id2) {
   const inputAmount = parseFloat(document.getElementById(id).value);
   const history = document.getElementById("history-container");
-
-  // Create a new div for the history entry
+  const amount = parseFloat(document.getElementById("total-amount").innerText);
+  if (inputAmount > amount || isNaN(inputAmount) || inputAmount <= 0) {
+    return 0;
+  }
   const historyEntry = document.createElement("div");
   historyEntry.id = "history-content";
   historyEntry.className =
@@ -40,6 +42,7 @@ function historyUpdate(id, id2) {
       <p class="text-txtSecondary">
         Date : ${new Date().toString()}
       </p>
+      <br>
   `;
 
   // Append the new history entry to the history container
