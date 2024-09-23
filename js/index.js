@@ -27,7 +27,7 @@ document.getElementById("donate-now-1").addEventListener("click", function () {
   document.getElementById("donate-amount-1").innerText = getDonateMoney;
   const changeTotalAmount = totalAmount("input-amount");
   document.getElementById("total-amount").innerText = changeTotalAmount;
-  historyUpdate("input-amount", Noakhali);
+  historyUpdate("input-amount", "Noakhali");
 });
 
 document.getElementById("donate-now-2").addEventListener("click", function () {
@@ -52,6 +52,7 @@ document.getElementById("donate-now-3").addEventListener("click", function () {
   const changeTotalAmount = totalAmount("input-amount-3");
   document.getElementById("total-amount").innerText = changeTotalAmount;
   historyUpdate("input-amount-3", "Quota-Movement");
+  // modal
 });
 
 // document.getElementById("donate-now").addEventListener("click", function () {
@@ -59,3 +60,12 @@ document.getElementById("donate-now-3").addEventListener("click", function () {
 //   const donateAmount = document.getElementById("donate-amount");
 //   donateAmount.innerText = inputAmount;
 // });
+
+// const modal = document.getElementById('donation-modal');
+//   const donateButton = document.getElementById('donate-now-1');
+
+//   // When the user clicks the Donate Now button, open the modal
+//   donateButton.addEventListener('click', function() {
+//     modal.showModal();
+
+// modal

@@ -135,6 +135,34 @@
                 >
                   Donate Now
                 </button>
+
+                <!-- modal -->
+                <dialog
+                  id="donation-modal-1"
+                  class="modal modal-bottom sm:modal-middle"
+                >
+                  <div
+                    class="modal-box flex flex-col justify-center items-center gap-5"
+                  >
+                    <h3 class="text-3xl font-extrabold text-txtSecondary bold">
+                      Congratulations
+                    </h3>
+                    <img class="w-10 h-10" src="./assets/coin.png" alt="coin" />
+                    <p class="py-4 text-center">
+                      You have donated for humankind <br />
+                      <span
+                        class="text-txtPrimary text-2xl font-bold text-center"
+                        >Successfully...</span
+                      >
+                    </p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal -->
               </div>
             </div>
           </div>
@@ -179,6 +207,34 @@
                 >
                   Donate Now
                 </button>
+
+                <!-- modal -->
+                <dialog
+                  id="donation-modal-2"
+                  class="modal modal-bottom sm:modal-middle"
+                >
+                  <div
+                    class="modal-box flex flex-col justify-center items-center gap-5"
+                  >
+                    <h3 class="text-3xl font-extrabold text-txtSecondary bold">
+                      Congratulations
+                    </h3>
+                    <img class="w-10 h-10" src="./assets/coin.png" alt="coin" />
+                    <p class="py-4 text-center">
+                      You have donated for humankind <br />
+                      <span
+                        class="text-txtPrimary text-2xl font-bold text-center"
+                        >Successfully...</span
+                      >
+                    </p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal -->
               </div>
             </div>
           </div>
@@ -227,6 +283,34 @@
                 >
                   Donate Now
                 </button>
+
+                <!-- modal -->
+                <dialog
+                  id="donation-modal-3"
+                  class="modal modal-bottom sm:modal-middle"
+                >
+                  <div
+                    class="modal-box flex flex-col justify-center items-center gap-5"
+                  >
+                    <h3 class="text-3xl font-extrabold text-txtSecondary bold">
+                      Congratulations
+                    </h3>
+                    <img class="w-10 h-10" src="./assets/coin.png" alt="coin" />
+                    <p class="py-4 text-center">
+                      You have donated for humankind <br />
+                      <span
+                        class="text-txtPrimary text-2xl font-bold text-center"
+                        >Successfully...</span
+                      >
+                    </p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+                <!-- modal -->
               </div>
             </div>
           </div>
@@ -250,5 +334,18 @@
     </main>
     <script src="./js/index.js"></script>
     <script src="./js/function.js"></script>
+
+    <script>
+      // Get the modal element and the donate button
+      const modal = document.getElementById("donation-modal");
+      const donateButton1 = document.getElementById("donate-now-1");
+
+      // When the user clicks the Donate Now button, open the modal
+      donateButton1.addEventListener("click", function () {
+        modal.showModal(); // Opens the modal
+      });
+
+      // Modal can be closed by clicking the "Close" button (handled by form method="dialog")
+    </script>
   </body>
 </html>
