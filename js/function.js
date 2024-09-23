@@ -1,16 +1,28 @@
 // create function
 
 function getMoney(id) {
+  const amount = parseFloat(document.getElementById("total-amount").innerText);
   const inputAmount = parseFloat(document.getElementById(id).value);
+  if (isNaN(inputAmount) || inputAmount <= 0 || inputAmount > amount) {
+    return 0;
+  }
   return inputAmount;
 }
 
-function setMoney(id) {
-  const donateElement = parseFloat(document.getElementById(id).innerText);
-  return donateElement;
+function setMoney(ia, da) {
+  const amount = parseFloat(document.getElementById("total-amount").innerText);
+  const inputAmount = parseFloat(document.getElementById(ia).value);
+  if (isNaN(inputAmount) || inputAmount <= 0 || inputAmount > amount) {
+    return 0;
+  }
+  const donateElement = parseFloat(document.getElementById(da).innerText);
+  const donate = inputAmount + donateElement;
+
+  document.getElementById(da).innerText = donate;
 }
 
-function totalAmount(id) {
+function totalAmount(id, id2) {
+  const modal = document.getElementById(id2);
   const am = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("total-amount").innerText);
   if (am > amount || isNaN(am) || am <= 0) {
@@ -18,8 +30,8 @@ function totalAmount(id) {
     return 0;
   }
   const amountChange = amount - am;
+  modal.showModal();
   document.getElementById("total-amount").innerText = amountChange;
-
   console.log(am, amount, amountChange);
   return amountChange;
 }
@@ -45,11 +57,6 @@ function historyUpdate(id, id2) {
       <br>
   `;
 
-  // Append the new history entry to the history container
   history.appendChild(historyEntry);
+  document.getElementById(id).value = "";
 }
-
-// function showModal() {
-//   const modal = document.getElementById("my_modal_5");
-//   modal.showModal();
-// }
