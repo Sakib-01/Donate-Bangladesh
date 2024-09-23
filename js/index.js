@@ -32,7 +32,6 @@ document.getElementById("donate-now-2").addEventListener("click", function () {
   const getDonateMoney = getMoney("input-amount-2");
   const setDonateMoney = setMoney("input-amount-2", "donate-amount-2");
   // console.log(getDonateMoney, setDonateMoney);
-
   // document.getElementById("donate-amount-2").innerText = setDonateMoney;
   totalAmount("input-amount-2", "my_modal_2");
   historyUpdate("input-amount-2", "Feni");
@@ -42,7 +41,6 @@ document.getElementById("donate-now-3").addEventListener("click", function () {
   const getDonateMoney = getMoney("input-amount-3");
   const setDonateMoney = setMoney("input-amount-3", "donate-amount-3");
   // console.log(getDonateMoney, setDonateMoney);
-
   // document.getElementById("donate-amount-3").innerText = setDonateMoney;
   totalAmount("input-amount-3", "my_modal_3");
   historyUpdate("input-amount-3", "Quota-Movement");

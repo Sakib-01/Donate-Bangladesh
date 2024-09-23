@@ -57,6 +57,7 @@ function historyUpdate(id, id2) {
       <br>
   `;
 
-  history.appendChild(historyEntry);
+  history.insertBefore(historyEntry, history.firstChild);
+
   document.getElementById(id).value = "";
 }
