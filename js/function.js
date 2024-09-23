@@ -2,12 +2,6 @@
 
 function getMoney(id) {
   const inputAmount = parseFloat(document.getElementById(id).value);
-
-  if (isNaN(inputAmount) || inputAmount <= 0) {
-    alert("Please enter a valid donation amount.");
-    return 0;
-  }
-
   return inputAmount;
 }
 
@@ -19,37 +13,37 @@ function setMoney(id) {
 function totalAmount(id) {
   const am = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("total-amount").innerText);
-  const amountChange = amount - am;
-  if (am > amount) {
-    alert("The entered amount exceeds the total available amount.");
+  if (am > amount || isNaN(am) || am <= 0) {
+    alert("Please enter a valid donation amount.");
     return 0;
   }
+  const amountChange = amount - am;
+  document.getElementById("total-amount").innerText = amountChange;
 
   console.log(am, amount, amountChange);
   return amountChange;
 }
 
-function historyUpdate(id, location) {
+function historyUpdate(id, id2) {
   const inputAmount = parseFloat(document.getElementById(id).value);
-  const amount = parseFloat(document.getElementById("total-amount").innerText);
+  const history = document.getElementById("history-container");
 
-  if (isNaN(inputAmount) || inputAmount <= 0 || inputAmount > amount) {
-    return 0;
-  }
-  const historyContent = document.createElement("div");
-  historyContent.id = "history-content";
-  historyContent.className =
+  // Create a new div for the history entry
+  const historyEntry = document.createElement("div");
+  historyEntry.id = "history-content";
+  historyEntry.className =
     "border-2 border:rgba(17, 17, 17, 0.1) rounded-3xl p-8";
-  historyContent.innerHTML = `
+  historyEntry.innerHTML = `
       <h3 class="text-txtpPrimary">
-        ${inputAmount} Taka is Donated for famine-2024 at ${location}, Bangladesh
+        ${inputAmount} Taka is Donated for famine-2024 at ${id2}, Bangladesh
       </h3>
       <p class="text-txtSecondary">
-        Date: ${new Date().toLocaleString()} 
+        Date : ${new Date().toString()}
       </p>
   `;
-  const history = document.getElementById("history-container");
-  history.appendChild(historyContent);
+
+  // Append the new history entry to the history container
+  history.appendChild(historyEntry);
 }
 
 // function showModal() {

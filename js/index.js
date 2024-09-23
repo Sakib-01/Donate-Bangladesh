@@ -25,8 +25,7 @@ document.getElementById("donate-now-1").addEventListener("click", function () {
   const setDonateMoney = setMoney("donate-amount-1");
   // console.log(getDonateMoney, setDonateMoney);
   document.getElementById("donate-amount-1").innerText = getDonateMoney;
-  const changeTotalAmount = totalAmount("input-amount");
-  document.getElementById("total-amount").innerText = changeTotalAmount;
+  totalAmount("input-amount");
   historyUpdate("input-amount", "Noakhali");
 });
 
@@ -36,9 +35,7 @@ document.getElementById("donate-now-2").addEventListener("click", function () {
   // console.log(getDonateMoney, setDonateMoney);
 
   document.getElementById("donate-amount-2").innerText = getDonateMoney;
-
-  const changeTotalAmount = totalAmount("input-amount-2");
-  document.getElementById("total-amount").innerText = changeTotalAmount;
+  totalAmount("input-amount-2");
   historyUpdate("input-amount-2", "Feni");
 });
 
@@ -48,9 +45,7 @@ document.getElementById("donate-now-3").addEventListener("click", function () {
   // console.log(getDonateMoney, setDonateMoney);
 
   document.getElementById("donate-amount-3").innerText = getDonateMoney;
-
-  const changeTotalAmount = totalAmount("input-amount-3");
-  document.getElementById("total-amount").innerText = changeTotalAmount;
+  totalAmount("input-amount-3");
   historyUpdate("input-amount-3", "Quota-Movement");
   // modal
 });
