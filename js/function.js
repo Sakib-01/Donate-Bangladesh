@@ -21,7 +21,7 @@ function setMoney(ia, da) {
   document.getElementById(da).innerText = donate;
 }
 
-function totalAmount(id, id2) {
+function totalAmount(id, id2, location) {
   const modal = document.getElementById(id2);
   const am = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("total-amount").innerText);
@@ -33,23 +33,24 @@ function totalAmount(id, id2) {
   modal.showModal();
   document.getElementById("total-amount").innerText = amountChange;
   console.log(am, amount, amountChange);
+  historyUpdate(id, location);
   return amountChange;
 }
 
-function historyUpdate(id, id2) {
+function historyUpdate(id, location) {
   const inputAmount = parseFloat(document.getElementById(id).value);
   const history = document.getElementById("history-container");
   const amount = parseFloat(document.getElementById("total-amount").innerText);
-  if (inputAmount > amount || isNaN(inputAmount) || inputAmount <= 0) {
-    return 0;
-  }
+  // if (amount < inputAmount || isNaN(inputAmount) || inputAmount <= 0) {
+  //   return 0;
+  // }
   const historyEntry = document.createElement("div");
   historyEntry.id = "history-content";
   historyEntry.className =
     "border-2 border:rgba(17, 17, 17, 0.1) rounded-3xl p-8";
   historyEntry.innerHTML = `
       <h3 class="text-txtpPrimary">
-        <span class= "font-bold text-green-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-green-700"> ${id2} </span>, Bangladesh
+        <span class= "font-bold text-green-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-green-700"> ${location} </span>, Bangladesh
       </h3>
       <p class="text-txtSecondary">
         Date : ${new Date().toString()}
