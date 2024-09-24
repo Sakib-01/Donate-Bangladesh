@@ -12,12 +12,7 @@ function getMoney(id) {
 function setMoney(ia, da) {
   const amount = parseFloat(document.getElementById("total-amount").innerText);
   const inputAmount = parseFloat(document.getElementById(ia).value);
-  if (
-    isNaN(inputAmount) ||
-    inputAmount <= 0 ||
-    inputAmount > amount ||
-    inputAmount !== "number"
-  ) {
+  if (isNaN(inputAmount) || inputAmount <= 0 || inputAmount > amount) {
     return 0;
   }
   const donateElement = parseFloat(document.getElementById(da).innerText);
@@ -30,7 +25,7 @@ function totalAmount(id, id2) {
   const modal = document.getElementById(id2);
   const am = parseFloat(document.getElementById(id).value);
   const amount = parseFloat(document.getElementById("total-amount").innerText);
-  if (am > amount || isNaN(am) || am <= 0 || am !== "number") {
+  if (am > amount || isNaN(am) || am <= 0) {
     alert("Please enter a valid donation amount.");
     return 0;
   }
@@ -45,12 +40,7 @@ function historyUpdate(id, id2) {
   const inputAmount = parseFloat(document.getElementById(id).value);
   const history = document.getElementById("history-container");
   const amount = parseFloat(document.getElementById("total-amount").innerText);
-  if (
-    inputAmount > amount ||
-    isNaN(inputAmount) ||
-    inputAmount <= 0 ||
-    inputAmount !== "number"
-  ) {
+  if (inputAmount > amount || isNaN(inputAmount) || inputAmount <= 0) {
     return 0;
   }
   const historyEntry = document.createElement("div");
