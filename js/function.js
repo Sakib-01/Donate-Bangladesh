@@ -49,7 +49,7 @@ function historyUpdate(id, id2) {
     "border-2 border:rgba(17, 17, 17, 0.1) rounded-3xl p-8";
   historyEntry.innerHTML = `
       <h3 class="text-txtpPrimary">
-        ${inputAmount} Taka is Donated for famine-2024 at ${id2}, Bangladesh
+        <span class= "font-bold text-green-700">${inputAmount}</span> Taka is Donated for famine-2024 at <span class= "font-bold text-green-700"> ${id2} </span>, Bangladesh
       </h3>
       <p class="text-txtSecondary">
         Date : ${new Date().toString()}
